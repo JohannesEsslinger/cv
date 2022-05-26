@@ -1,15 +1,37 @@
 \documentclass[11pt, a4paper]{moderncv}
 
-\newcommand{\en}[1]{#1}
-\newcommand{\de}[1]{}
+\newcommand{\en}[1]{}
+\newcommand{\de}[1]{#1}
 
 \en{\usepackage[english]{babel}}
 \de{\usepackage[ngerman]{babel}}
 
 \usepackage[utf8]{inputenc}
-\usepackage[left=2.4cm, right=1.0cm, top=1.7cm, bottom=2.0cm, scale=0.8]{geometry}
-%\usepackage{fontawesome}  %Paket für schönere Symbole bei den persönlichen Daten.
- 
+\usepackage[left=1.7cm, right=1.7cm, top=1.0cm, bottom=1.0cm, scale=0.8]{geometry}
+\usepackage{fontawesome}
+
+% source: https://tex.stackexchange.com/a/294990/271172
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+\renewcommand{\link}[2]{\href{#1}{#2 \ExternalLink}}
 
 
 \newcommand{\quotes}[1]{\en{``#1''}\de{\glqq{}#1\grqq{}}}
@@ -25,7 +47,7 @@
 \email{pavelzw@gmail.com}
 \social[github][github.com/pavelzw]{pavelzw}
 \social[linkedin][linkedin.com/in/pavel-zwerschke-384408204]{Pavel Zwerschke}
-%\photo[2.5cm]{images/photo}
+% \photo[2.5cm]{images/photo}
  
 \begin{document}
 \vspace*{-10mm}
@@ -108,18 +130,30 @@
 \section{\en{Programming Skills}\de{Programmierkenntnisse}}
 \cvcomputer{\en{Languages}\de{Sprachen}}{Python, Java, Bash, SQL, LaTeX}{\en{Technologies}\de{Technologien}}{Linux, NumPy, pandas, PyTorch, Docker, Git}
 
+\section{\en{Open Source Projects}\de{Open Source Projekte}}
+\cvlistitem{\link{https://github.com/pavelzw/calibre-kindle-comics}{\textbf{calibre-kindle-comics}}: 
+            \en{A calibre plugin that converts .cbz and .cbr files into a readable format for Kindle viewer.}
+            \de{Ein calibre Plugin, welches .cbz und .cbr Dateien in ein lesbares Format für Kindle Geräte umwandelt.}}
+\cvlistitem{\link{https://github.com/pavelzw/7circles}{\textbf{7circles}}: 
+            \en{An educational video created with manim about the Seven-Circles-Theorem. The video is available on \link{https://youtu.be/flR3e5Cc2G4}{YouTube}.}
+            \de{Ein mit manim animiertes Video über den Sieben-Kreise-Satz. Das Video ist auf \link{https://youtu.be/flR3e5Cc2G4}{YouTube} verfügbar.}}
+\cvlistitem{\textbf{\en{Further contributions}\de{Weitere Beiträge}}: 
+            Microsoft PowerToys (\link{https://github.com/microsoft/PowerToys/pulls?q=is\%3Apr+author\%3Apavelzw+}
+            {\en{Added localized number formatting support}\de{lokalisierte Zahlenformatierung hinzugefügt}})}
+% https://github.com/microsoft/PowerToys/pulls?q=is%3Apr+author%3Apavelzw+
+
 \section{\en{Languages}\de{Sprachen}}
-\cvlanguage{\en{German}\de{Deutsch}}{\en{Native}\de{Muttersprache}}{}
-\cvlanguage{\en{English}\de{Englisch}}{\en{Fluent}\de{Fließend}}{}
-\cvlanguage{\en{French}\de{Französisch}}{\en{Advanced}\de{Sehr gute Kenntnisse}}{}
-\cvlanguage{\en{Russian}\de{Russisch}}{\en{Good}\de{Gute Kenntnisse}}{}
-\cvlanguage{\en{Japanses}\de{Japanisch}}{\en{Basic}\de{Grundlegende Kenntnisse}}{}
-\cvlanguage{\en{Dutch}\de{Niederländisch}}{\en{Basic}\de{Grundlegende Kenntnisse}}{}
+% use \cvcomputer for multi column descriptions
+\cvcomputer{\en{German}\de{Deutsch}}{\en{Native}\de{Muttersprache}}
+           {\en{English}\de{Englisch}}{\en{Fluent}\de{Fließend}}
+\cvcomputer{\en{French}\de{Französisch}}{\en{Advanced}\de{Sehr gute Kenntnisse}}
+           {\en{Russian}\de{Russisch}}{\en{Good}\de{Gute Kenntnisse}}
+\cvcomputer{\en{Dutch}\de{Niederländisch}}{\en{Basic}\de{Grundlegende Kenntnisse}}
+           {\en{Japanese}\de{Japanisch}}{\en{Basic}\de{Grundlegende Kenntnisse}}
 
 \section{\en{Hobbys}\de{Hobbys, Interessen}}
-\cvlistitem{\en{Piano}\de{Klavier}}
-\cvlistitem{\en{Dancing}\de{Tanzen}}
-\cvlistitem{Tennis}
+\cvlistdoubleitem{\en{Piano}\de{Klavier}}{Tennis}
+\cvlistdoubleitem{\en{Dancing}\de{Tanzen}}{}
 
 \emptysection{}\closesection
 \vfill  %Platz bis Seitenende auffüllen.
