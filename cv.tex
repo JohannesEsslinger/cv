@@ -1,0 +1,128 @@
+\documentclass[11pt, a4paper]{moderncv}
+
+\newcommand{\en}[1]{}
+\newcommand{\de}[1]{#1}
+
+\en{\usepackage[english]{babel}}
+\de{\usepackage[ngerman]{babel}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[left=2.4cm, right=1.0cm, top=1.7cm, bottom=2.0cm, scale=0.8]{geometry}
+%\usepackage{fontawesome}  %Paket für schönere Symbole bei den persönlichen Daten.
+ 
+
+
+\newcommand{\quotes}[1]{\en{``#1''}\de{\glqq{}#1\grqq{}}}
+\renewcommand*{\namefont}{\fontsize{20}{22}\mdseries\upshape}
+
+\moderncvtheme[blue]{classic}
+\moderncvicons{awesome}
+ 
+\name{Pavel}{Zwerschke}
+\title{\en{CV}\de{Lebenslauf}}
+% \address{}{}
+% \phone[mobile]{}
+\email{pavelzw@gmail.com}
+\social[github][https://github.com/pavelzw]{pavelzw}
+\social[linkedin][https://linkedin.com/in/pavel-zwerschke-384408204]{Pavel Zwerschke}
+%\photo[2.5cm]{images/photo}
+ 
+\begin{document}
+\vspace*{-10mm}
+\makecvtitle
+\vspace*{-13mm}
+
+\section{\en{Personal}\de{Persönliche Daten}}
+\cvline{\en{born}\de{geboren}}{12.04.2001, Stuttgart}
+
+\section{\en{Education}\de{Ausbildung}}
+%\cventry{2010-2018}{Gymnasium}{Königin-Olga-Stift}{Stuttgart}{}{Abitur: 1,4}
+\cventry{2021-\en{today}\de{heute}}
+        {\en{Karlsruhe Institute of Technology (KIT)}\de{Karlsruher Institut für Technologie (KIT)}}
+        {M. Sc. \en{Mathematics}\de{Mathematik}}
+        {}
+        {}
+        {\en{German grade average: 1.0}\de{Durchschnittsnote: 1,0}}
+\cventry{2021-\en{today}\de{heute}}
+        {\en{Karlsruhe Institute of Technology (KIT)}\de{Karlsruher Institut für Technologie (KIT)}}
+        {M. Sc. \en{Computer Science}\de{Informatik}}
+        {}
+        {}
+        {\en{German grade average: 1.0}\de{Durchschnittsnote: 1,0}}
+\cventry{2018-2021}
+        {\en{Karlsruhe Institute of Technology (KIT)}\de{Karlsruher Institut für Technologie (KIT)}}
+        {B. Sc. \en{Mathematics}\de{Mathematik}}
+        {}
+        {}
+        {\en{German grade average: 1.0 (with distinction)\\
+        Thesis: \quotes{Nonparametric Distributional Regression Models for Probabilistic Energy Forecasting}}
+        \de{Durchschnittsnote: 1,0 (mit Auszeichnung)\\
+        Thesis: \quotes{Nonparametric Distributional Regression Models for Probabilistic Energy Forecasting}}}
+\cventry{2019-2021}
+        {\en{Karlsruhe Institute of Technology (KIT)}\de{Karlsruher Institut für Technologie (KIT)}}
+        {B. Sc. \en{Computer Science}\de{Informatik}}
+        {}
+        {}
+        {\en{German grade average: 1.1 (with distinction)}\de{Durchschnittsnote: 1,1 (mit Auszeichnung)}}
+
+%\section{Praktika/Workshops/Studienreisen}
+%\cvitem{08.2014}{Schülersprachreise in Exeter}
+%\cvitem{09.2014}{TSCHIRA-Jugendakademie -- Forscherkurse für junge WissensSchaffer: \quotes{Aufbaukurs: Was ist Leben?} (Uni Heidelberg)}
+%\cvitem{10.2014}{Schüleraustausch Russland, Samara}
+%\cvitem{2014-2015}{Traineeprogramm Pädagogik für eine Waldheim-Jugendgruppenleiterausbildung} %todo hbox
+%\cvitem{02.2016}{Berufsorientierung Praktikum, Robert Bosch GmbH, Stuttgart}
+%\cvitem{02.2017}{Workshop \quotes{Rechnergestützte Produktentwicklung unter Einsatz eines 3D-Druckers} (Uni Stuttgart)}
+%\cvitem{02.2017}{Diverse Workshops in Mathematik, Informatik, Physik an der Universität Stuttgart}
+%\cvitem{04.2017}{Schüleraustausch USA, Salem (Oregon)}
+%\cvitem{07.2017}{1. Platz beim Science Quiz (Kepler Seminar)}
+%\cvitem{09.2017}{Schnupperstudium Informatik am KIT}
+%\cvitem{02.2018}{Teilnahme an der Bundesrunde der 49. Internationalen Physikolympiade}
+
+\section{\en{Experience}\de{Berufserfahrung}}
+% \cvitem{2015-2018}{Jugendteamleiter im Waldheim Johannes und Waldheim Waldebene Ost, Stuttgart}
+\cventry{04.2022-\en{today}\de{heute}}
+        {QuantCo}
+        {\en{Working Student}\de{Werkstudent}}
+        {}
+        {}
+        {\en{I Implemented a more efficient algorithm to store sklearn models. Results in 3x disk space savings.}
+        \de{Ich habe einen effizienteren Algorithmus für das Speichern von sklearn-Modellen entwickelt mit dreifacher Speichereffizienz.}}
+\cventry{2021-2022}
+        {\en{Karlsruhe Institute of Technology (KIT)}\de{Karlsruher Institut für Technologie (KIT)}}
+        {\en{Scientific Assistant}\de{Wissenschaftliche Hilfskraft}}
+        {}
+        {}
+        {\en{I was participating in the \quotes{S2S AI Challenge}, a challenge to improve sub-seasonal to seasonal weather predictions using artificial intelligence.}
+        \de{Ich habe in der \quotes{S2S AI Challenge} mitgemacht, einem Wettbewerb zum Verbessern der sub-seasonal to seasonal Wettervorhersagen mithilfe von künstlicher Intelligenz.}}
+\cventry{2019-2021}
+        {\en{Karlsruhe Institute of Technology (KIT)}\de{Karlsruher Institut für Technologie (KIT)}}
+        {\en{Tutor}\de{Tutor}}
+        {}
+        {}
+        {\en{I gave tutorials in multiple subjects such as \quotes{Basic Notions of Computer Science}, \quotes{Software Engineering}, \quotes{Linear Algebra} and \quotes{Introduction to Probability Theory}.}
+        \de{Ich habe Tutorien in mehreren Modulen gehalten: \quotes{Grundbegriffe der Informatik}, \quotes{Softwaretechnik}, \quotes{Lineare Algebra 1} und \quotes{Einführung in die Stochastik}.}}
+\cvitem{2016-2018}{\en{Tutor in mathematics, physics and french}
+        \de{Nachhilfelehrer für Mathematik, Physik und Französisch}}
+
+
+\section{\en{Programming Skills}\de{Programmierkenntnisse}}
+\cvcomputer{\en{Languages}\de{Sprachen}}{Python, Java, Bash, SQL, LaTeX}{\en{Technologies}\de{Technologien}}{Linux, NumPy, pandas, PyTorch, Docker, Git}
+
+\section{\en{Languages}\de{Sprachen}}
+\cvlanguage{\en{German}\de{Deutsch}}{\en{Native}\de{Muttersprache}}{}
+\cvlanguage{\en{English}\de{Englisch}}{\en{Fluent}\de{Fließend}}{}
+\cvlanguage{\en{French}\de{Französisch}}{\en{Advanced}\de{Sehr gute Kenntnisse}}{}
+\cvlanguage{\en{Russian}\de{Russisch}}{\en{Good}\de{Gute Kenntnisse}}{}
+\cvlanguage{\en{Japanses}\de{Japanisch}}{\en{Basic}\de{Grundlegende Kenntnisse}}{}
+\cvlanguage{\en{Dutch}\de{Niederländisch}}{\en{Basic}\de{Grundlegende Kenntnisse}}{}
+
+\section{\en{Hobbys}\de{Hobbys, Interessen}}
+\cvlistitem{\en{Piano}\de{Klavier}}
+\cvlistitem{\en{Dancing}\de{Tanzen}}
+\cvlistitem{Tennis}
+
+\emptysection{}\closesection
+\vfill  %Platz bis Seitenende auffüllen.
+Pavel Zwerschke\\
+Karlsruhe, \today
+\end{document}
