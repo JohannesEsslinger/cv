@@ -12,27 +12,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Compile LaTeX document
+      - name: Compile LaTeX document (English)
         uses: xu-cheng/latex-action@v2
         with:
           root_file: cv.tex
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          args: -jobname=english
+      - name: Compile LaTeX document (German)
+        uses: xu-cheng/latex-action@v2
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
-      - name: Upload Release Asset
-        id: upload-release-asset 
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./out/cv.pdf
-          asset_name: cv.pdf
-          asset_content_type: application/pdf
+          root_file: cv.tex
+          args: -jobname=german
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with: 
+          files: |
+            out/english.pdf
+            out/german.pdf
