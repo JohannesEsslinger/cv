@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Compile LaTeX document (English)
         uses: xu-cheng/latex-action@v2
         with:
@@ -18,7 +18,7 @@ jobs:
           args: -jobname=german
       - name: Upload LaTeX document
         uses: actions/upload-artifact@v3
-        with: 
+        with:
           name: PDF
           path: |
             out/english.pdf
